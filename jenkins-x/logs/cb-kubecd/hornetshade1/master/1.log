@@ -1,0 +1,145 @@
+
+Showing logs for build [32mcb-kubecd-hornetshade1-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-bj42d[0m
+{"level":"warn","ts":1574015132.7181766,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1574015132.718987,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mcb-kubecd-hornetshade1-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-47t9r[0m
+{"level":"warn","ts":1574015133.7310152,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1574015133.7349062,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mcb-kubecd-hornetshade1-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mcb-kubecd-hornetshade1-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-cb-kubecd-hornetshade1-master-hg9k7[0m
+{"level":"warn","ts":1574015172.7912085,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1574015173.3306212,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/cb-kubecd/hornetshade1.git @ v0.0.1 in path /workspace/source"}
+
+Showing logs for build [32mcb-kubecd-hornetshade1-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:b0feeacd9cf540f06e191e9ec0981387416160ed
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mcb-kubecd-hornetshade1-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mcb-kubecd-hornetshade1-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mcb-kubecd-hornetshade1-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN REPLACE_ME@1.0.0 No repository field.
+npm WARN REPLACE_ME@1.0.0 No license field.
+
+up to date in 0.313s
+found 0 vulnerabilities
+
+
+Showing logs for build [32mcb-kubecd-hornetshade1-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> REPLACE_ME@1.0.0 test /workspace/source
+> echo "no test specified" && exit 0
+
+no test specified
+
+Showing logs for build [32mcb-kubecd-hornetshade1-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Downloading base image node:9-slim           
+ERROR: logging before flag.Parse: E1117 18:26:17.363933      10 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+ERROR: logging before flag.Parse: E1117 18:26:17.367895      10 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+2019/11/17 18:26:17 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0000] Error while retrieving image from cache: getting file info: stat /workspace/sha256:0e0175bbe4f8d9d104590d8d2c591017874e30977cb71aaff1cf6fa99479575c: no such file or directory 
+[36mINFO[0m[0000] Downloading base image node:9-slim           
+2019/11/17 18:26:18 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0001] Executing 0 build triggers                   
+[36mINFO[0m[0001] cmd: EXPOSE                                  
+[36mINFO[0m[0001] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0001] Using files from context: [/workspace/source] 
+[36mINFO[0m[0001] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0001] Taking snapshot of full filesystem...        
+[36mINFO[0m[0001] ENV PORT 8080                                
+[36mINFO[0m[0001] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0001] EXPOSE 8080                                  
+[36mINFO[0m[0001] cmd: EXPOSE                                  
+[36mINFO[0m[0001] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0001] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0001] WORKDIR /usr/src/app                         
+[36mINFO[0m[0001] cmd: workdir                                 
+[36mINFO[0m[0001] Changed working directory to /usr/src/app    
+[36mINFO[0m[0001] Creating directory /usr/src/app              
+[36mINFO[0m[0001] Taking snapshot of files...                  
+[36mINFO[0m[0001] Using files from context: [/workspace/source] 
+[36mINFO[0m[0001] COPY . .                                     
+[36mINFO[0m[0001] Taking snapshot of files...                  
+[36mINFO[0m[0001] CMD ["npm", "start"]                         
+[36mINFO[0m[0001] No files changed in this command, skipping snapshotting. 
+2019/11/17 18:26:19 existing blob: sha256:a88538b9cd05cfa611e43a25582a95ad7879f6fa708b0386a26b71ee62235bb3
+2019/11/17 18:26:19 existing blob: sha256:e01bd28a434b56ffd2a3fe9aa99b9b69aecca69904843edd30b1ee7150d79904
+2019/11/17 18:26:19 existing blob: sha256:5bba3ecb4cd6374a19da45f2a3db0a9c0804984358b3bb4b666c28944016e5ff
+2019/11/17 18:26:19 existing blob: sha256:7d083412657baa2dafba8d093034ef26f9ed2c90fb6ed95f76bb55aff03ed429
+2019/11/17 18:26:19 existing blob: sha256:196b8e3c919d5639193ba6c6e54774528942041bbc37606631a2250502985c3c
+2019/11/17 18:26:21 pushed blob: sha256:ee0c17cf34acaa4cb9f7387165540b25df8dae630b96b53fc37b189cf4610680
+2019/11/17 18:26:21 pushed blob: sha256:667947fb26bd9d13725022cb4b001d08799231bc29f56ac2bc9c174db5695a4f
+2019/11/17 18:26:21 pushed blob: sha256:5ce63522d97b918d3985eb190539e13b61b8ceec187d2354f825bd2f1d1538c2
+2019/11/17 18:26:22 gcr.io/jenkins-x-demo-238815/hornetshade1:0.0.1: digest: sha256:1d984c38766e01c69c31ca5ab1654640e6bcf080af0c18df29dee8d175af825e size: 1404
+
+Showing logs for build [32mcb-kubecd-hornetshade1-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mcb-kubecd-hornetshade1-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/hornetshade1 to an unshallow repository
+Generating change log from git ref 20bdac716427c595d6c3cf522d5384082486e978 => 0744d237897fa63064e82eb46eb3c3df51f16e15
+Associating user x-0 in users.jenkins.io with email rawlingsj80@gmail.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit b0feeacd9cf540f06e191e9ec0981387416160ed with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Finding issues in commit messages using git format
+WARNING: No release found for cb-kubecd/hornetshade1 and tag v0.0.1 so creating a new release
+Updated the release information at https://github.com/cb-kubecd/hornetshade1/releases/tag/v0.0.1
+generated: /workspace/source/charts/hornetshade1/templates/release.yaml
+Created Release hornetshade1-0-0-1 resource in namespace **
+Updating PipelineActivity cb-kubecd-hornetshade1-master-1 with version 0.0.1
+Updated PipelineActivities cb-kubecd-hornetshade1-master-1 with release notes URL: https://github.com/cb-kubecd/hornetshade1/releases/tag/v0.0.1
+
+Showing logs for build [32mcb-kubecd-hornetshade1-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Read credentials for https://storage.googleapis.com/chartmuseum.jenkins-x.io from vault helm/repos
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Read credentials for http://jenkins-x-chartmuseum:8080 from vault helm/repos
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file hornetshade1-0.0.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mcb-kubecd-hornetshade1-master-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app hornetshade1 version 0.0.1 to namespace **-staging
+WARNING: Waiting for the fork of ******************/environment-hornetshade-staging to appear...
+Forked Git repository to https://github.com/******************/environment-hornetshade-staging
+Created Pull Request: https://github.com/cb-kubecd/environment-hornetshade-staging/pull/1
+Added label updatebot to Pull Request https://github.com/cb-kubecd/environment-hornetshade-staging/pull/1
+WARNING: Failed to query the Pull Request last commit status for https://github.com/cb-kubecd/environment-hornetshade-staging/pull/1 ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb Could not find a status for repository cb-kubecd/environment-hornetshade-staging with ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb
+WARNING: Failed to query the Pull Request last commit status for https://github.com/cb-kubecd/environment-hornetshade-staging/pull/1 ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb Could not find a status for repository cb-kubecd/environment-hornetshade-staging with ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb
+WARNING: Failed to query the Pull Request last commit status for https://github.com/cb-kubecd/environment-hornetshade-staging/pull/1 ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb Could not find a status for repository cb-kubecd/environment-hornetshade-staging with ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb
+WARNING: Failed to query the Pull Request last commit status for https://github.com/cb-kubecd/environment-hornetshade-staging/pull/1 ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb Could not find a status for repository cb-kubecd/environment-hornetshade-staging with ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb
+WARNING: Failed to query the Pull Request last commit status for https://github.com/cb-kubecd/environment-hornetshade-staging/pull/1 ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb Could not find a status for repository cb-kubecd/environment-hornetshade-staging with ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb
+WARNING: Failed to query the Pull Request last commit status for https://github.com/cb-kubecd/environment-hornetshade-staging/pull/1 ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb Could not find a status for repository cb-kubecd/environment-hornetshade-staging with ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb
+WARNING: Failed to query the Pull Request last commit status for https://github.com/cb-kubecd/environment-hornetshade-staging/pull/1 ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb Could not find a status for repository cb-kubecd/environment-hornetshade-staging with ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb
+WARNING: Failed to query the Pull Request last commit status for https://github.com/cb-kubecd/environment-hornetshade-staging/pull/1 ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb Could not find a status for repository cb-kubecd/environment-hornetshade-staging with ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb
+WARNING: Failed to query the Pull Request last commit status for https://github.com/cb-kubecd/environment-hornetshade-staging/pull/1 ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb Could not find a status for repository cb-kubecd/environment-hornetshade-staging with ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb
+WARNING: Failed to query the Pull Request last commit status for https://github.com/cb-kubecd/environment-hornetshade-staging/pull/1 ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb Could not find a status for repository cb-kubecd/environment-hornetshade-staging with ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb
+WARNING: Failed to query the Pull Request last commit status for https://github.com/cb-kubecd/environment-hornetshade-staging/pull/1 ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb Could not find a status for repository cb-kubecd/environment-hornetshade-staging with ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb
+WARNING: Failed to query the Pull Request last commit status for https://github.com/cb-kubecd/environment-hornetshade-staging/pull/1 ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb Could not find a status for repository cb-kubecd/environment-hornetshade-staging with ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb
+WARNING: Failed to query the Pull Request last commit status for https://github.com/cb-kubecd/environment-hornetshade-staging/pull/1 ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb Could not find a status for repository cb-kubecd/environment-hornetshade-staging with ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb
+WARNING: Failed to query the Pull Request last commit status for https://github.com/cb-kubecd/environment-hornetshade-staging/pull/1 ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb Could not find a status for repository cb-kubecd/environment-hornetshade-staging with ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb
+WARNING: Failed to query the Pull Request last commit status for https://github.com/cb-kubecd/environment-hornetshade-staging/pull/1 ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb Could not find a status for repository cb-kubecd/environment-hornetshade-staging with ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb
+WARNING: Failed to query the Pull Request last commit status for https://github.com/cb-kubecd/environment-hornetshade-staging/pull/1 ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb Could not find a status for repository cb-kubecd/environment-hornetshade-staging with ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb
+WARNING: Failed to query the Pull Request last commit status for https://github.com/cb-kubecd/environment-hornetshade-staging/pull/1 ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb Could not find a status for repository cb-kubecd/environment-hornetshade-staging with ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb
+WARNING: Failed to query the Pull Request last commit status for https://github.com/cb-kubecd/environment-hornetshade-staging/pull/1 ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb Could not find a status for repository cb-kubecd/environment-hornetshade-staging with ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb
+WARNING: Failed to query the Pull Request last commit status for https://github.com/cb-kubecd/environment-hornetshade-staging/pull/1 ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb Could not find a status for repository cb-kubecd/environment-hornetshade-staging with ref 7de7a705c429dbd908bac094fa5a58c5a732b1cb
+got git provider status pending from PR https://github.com/cb-kubecd/environment-hornetshade-staging/pull/1
+got git provider status pending from PR https://github.com/cb-kubecd/environment-hornetshade-staging/pull/1
+got git provider status pending from PR https://github.com/cb-kubecd/environment-hornetshade-staging/pull/1
+got git provider status pending from PR https://github.com/cb-kubecd/environment-hornetshade-staging/pull/1
+got git provider status pending from PR https://github.com/cb-kubecd/environment-hornetshade-staging/pull/1
+Pull Request https://github.com/cb-kubecd/environment-hornetshade-staging/pull/1 is merged at sha 868317aede7cd09d44e51a3b3bc54e34cd9c818d
+Pull Request merged but we are not waiting for the update pipeline to complete!
+WARNING: Could not find the service URL in namespace **-staging for names hornetshade1, **-hornetshade1, **-staging-hornetshade1
